@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="entypo.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="Roboto.css" type="text/css" media="screen"/>
+</head>
+<style>
+
+/* zocial */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+
+h2 {
+  color:rgba(255,255,255,.8);
+  margin-left:12px;
+}
+
+body {
+  background: #272125;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+form {
+  position:relative;
+  margin: 0px auto;
+  width: 380px;
+  height: auto;
+}
+
+input {
+  padding: 16px;
+  border-radius:7px;
+  border:0px;
+  background: rgba(255,255,255,.2);
+  display: block;
+  margin: 15px;
+  width: 300px;  
+  color:white;
+  font-size:18px;
+  height: 54px;
+}
+
+input:focus {
+  outline-color: rgba(0,0,0,0);
+  background: rgba(255,255,255,.95);
+  color: #e74c3c;
+}
+
+button {
+  float:right;
+  height: 261px;
+  width: 50px;
+  border: 0px;
+  background: #e74c3c;
+  border-radius:7px;
+  padding: 10px;
+  color:white;
+  font-size:22px;
+}
+
+.inputUserIcon {
+  position:absolute;
+  top:68px;
+  right: 80px;
+  color:white;
+}
+
+.inputPassIcon {
+  position:absolute;
+  top:136px;
+  right: 80px;
+  color:white;
+}
+
+input::-webkit-input-placeholder {
+  color: white;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: #e74c3c;
+}
+
+</style>
+
+<body>
+
+<form action="verify.php" method="POST">
+  <h2><span class="entypo-login"></span>Register</h2>
+  <button class="submit" >S<BR>U<BR>B<BR>M<BR>I<BR>T</button>
+
+  <input type="text" class="user" name="name" placeholder="Full Name" maxlength="75" required/>
+
+  <input type="text" class="user" name="usn" placeholder="Full USN (Eg: 4VV12CS006)" maxlength="10" required pattern="[1-4][a-zA-Z][a-zA-Z][0-9][0-9][a-zA-Z][a-zA-Z][0,1,4][0-9][0-9]"/>
+
+  <input type="text" class="user" name="phone" placeholder="Mobile Number (10 Digit)" maxlength="10" required pattern="[0-9]*"/>
+  
+  <input type="number" class="user" name="sem" placeholder="Enter the sem to be notified" min="1" max="8" required/>
+
+
+</form>
+ 
+ <script>
+ 
+$(".user").focusin(function(){
+  $(".inputUserIcon").css("color", "#e74c3c");
+}).focusout(function(){
+  $(".inputUserIcon").css("color", "white");
+});
+
+$(".pass").focusin(function(){
+  $(".inputPassIcon").css("color", "#e74c3c");
+}).focusout(function(){
+  $(".inputPassIcon").css("color", "white");
+});
+ </script>
+ 
+ 
+
+</body>
+</html>
