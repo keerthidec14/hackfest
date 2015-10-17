@@ -5,7 +5,14 @@ if(isset($_COOKIE['cok']))
 	$sesflag=1;
 if(isset($_GET['login']))
 {
-	$errflag=1;
+	if($_GET['login']==-1)
+	{
+		setcookie('cok', "", time() - (3600), "/"); //Delete
+		header("Location: http://localhost/sharecept");
+		die();
+	}
+	else
+		$errflag=1;
 }
 ?>
 <!DOCTYPE html>

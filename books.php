@@ -89,7 +89,7 @@
 
 							<li><a href="#0">Upload</a></li>
 							<li><a href="#0">Edit Account</a></li>
-							<li><a href="#0">Logout</a></li>
+							<li><a href="http://localhost/sharecept?login=-1">Logout</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -260,6 +260,39 @@
 				
 				
 		}
+		
+		if($searchresult==1)
+		{
+			
+			$sql="SELECT * FROM books 
+				WHERE concept_name like '%{$search}%' order by rating,unit asc";
+				$result = mysql_query($sql);
+				$noofrows = mysql_affected_rows();
+				
+				if($noofrows==0)
+					echo "<br><br><center><b><h1>NO Results</h1></b></center>";
+				
+				else
+				{
+				echo '<br><br><table border=3 class="pure-table pure-table-horizontal">';
+				echo '<thead>
+						<tr>
+						  <th>Concept</th>
+						  <th>Reference</th>
+						  <th>Content</th>
+						  <th>Image</th>
+						</tr>
+					  </thead>';
+				
+				while($data=mysql_fetch_assoc($result))
+				{
+					$output="<tr><td><b>".$data['concept_name']."</b></td><td><i>".$data['reference']."</td><td></i>".$data['content']."</td></tr>";
+					echo $output;
+				}
+				
+				echo '</table>';
+				}
+			}
 		
 		echo '</div> <!-- .content-wrapper -->';
 		?>
