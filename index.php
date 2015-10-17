@@ -115,15 +115,17 @@ if(isset($_GET['login']))
 					<section id="btn-click">
 					<form action="books.php">
 						<button class="btn btn-7 btn-7a icon-truck" >BOOKS</button>
-					<form>
-					
+					</form>
+					</td>
+					<td>
 					<form action="infra.php">
 						<button class="btn btn-7 btn-7a icon-truck">INFRASTRUCTURE</button>
-					<form>	
-					
+					</form>	
+					</td>
+					<td>
 					<form action="lect.php">
 						<button class="btn btn-7 btn-7a icon-truck">LECTURERS</button>
-					<form>
+					</form>
 					</section>
 					</td>
 					</tr>
