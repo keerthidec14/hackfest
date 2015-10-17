@@ -77,6 +77,8 @@
 			echo '<nav class="cd-nav">
 				<ul class="cd-top-nav">
 				<li><a href="http://vturesultz.com/vtuknowledge/">Forum</a></li>';
+				if($isloggedin==0)
+				 { echo '<li><a href="http://localhost/sharecept">Login</a></li>'; }
 			if($isloggedin==1)
 			{
 				echo '<li class="has-children account">
@@ -230,7 +232,7 @@
 			
 		}
 	
-		if($searchsub==1)
+		if($searchsub==10)//Disabled for testing (put 1)
 		{
 			
 			$sql="SELECT * FROM books 
