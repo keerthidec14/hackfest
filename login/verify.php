@@ -59,6 +59,8 @@
 	}
 	else
 	{
+		$cook="0";
+		setcookie('cok', $cook, time() - (3600), "/"); //1 hour
 		echo "<script>window.parent.location.reload()</script>";
 		exit(0);
 	}

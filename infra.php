@@ -126,7 +126,7 @@
 		if($searchresult==0 and $searchcat==0)
 		{
 		
-			echo '<h1>Find INFRASTRUCTUREs</h1> ';
+			echo '<h1>Find INFRASTRUCTURES</h1> ';
 			
 		}
 	

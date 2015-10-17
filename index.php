@@ -51,6 +51,10 @@ if(isset($_GET['login']))
             }
 	#element_to_pop_up { display:none; }
 	
+	#element_to_pop_up2 { display:none; }
+	
+	#element_to_pop_up3 { display:none; }
+	
 			.frame {
 				margin: 0;
 				padding: 0;
@@ -92,9 +96,18 @@ if(isset($_GET['login']))
 	{
 			echo "<form>
 					<button type='button' id='login-button' >Login</button>
+				</form><br><br>";
+			echo "<form>
+					<button type='button' id='signup-button' >Sign-Up</button>
 				</form>";
 			if($errflag==1)
 				echo "<h3 color=red>Invalid Username/Password</h3>";
+	}
+	else
+	{
+		echo   '<form action="http://localhost/sharecept/logout.php">
+					<button type="submit" id="logout-button" >Logout</button>
+				</form>';
 	}
 	?>
 			<div id="element_to_pop_up"> 
@@ -102,7 +115,14 @@ if(isset($_GET['login']))
 						<span class="button b-close"><span>X</span></span>
 						<iframe src="login/login.php" class="frame" frameBorder="0" scrolling="no" seamless="seamless" height="350" width="400"></iframe>
 							
-					</div>	
+			</div>	
+			<div id="element_to_pop_up2"> 
+							
+						<span class="button b-close"><span>X</span></span>
+						<iframe src="login/signup.php" class="frame" frameBorder="0" scrolling="no" seamless="seamless" height="450" width="400"></iframe>
+							
+			</div>
+			
 		<!-- Button -->
 		<br>
 		<br>
@@ -206,6 +226,20 @@ if(isset($_GET['login']))
 				 }); 
 			 })(jQuery);
 		</script>
+		<script>
+		(function($) {
+				$(function() {
+					$('#signup-button').bind('click', function(e) {
+						e.preventDefault();
+							$('#element_to_pop_up2').bPopup({
+								contentContainer:'.content',
+								loadUrl: 'http://localhost/sharecept/test.html' //Uses jQuery.load()
+							});
+					});
+				 }); 
+			 })(jQuery);
+		</script>
+		
 			<script type="text/javascript" language="javascript">
 							function closepopup()
 							{

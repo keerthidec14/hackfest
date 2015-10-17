@@ -121,6 +121,52 @@ form input:focus {
 	z-index: 10;
   background-color: #f5f7f9;
 }
+
+#signup-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 10;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #53e3a6;
+  border-radius: 3px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+#signup-button:hover {
+	z-index: 10;
+  background-color: #f5f7f9;
+}
+
+#logout-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 10;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #53e3a6;
+  border-radius: 3px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+#logout-button:hover {
+	z-index: 10;
+  background-color: #f5f7f9;
+}
+
+
 .bg-bubbles {
   position: absolute;
   top: 0;

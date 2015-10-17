@@ -226,7 +226,7 @@
 		if($showsubject==0 and $searchresult==0 and $searchsub==0)
 		{
 		
-			echo '<h1>BOOKS</h1> ';
+			echo '<h1>Find BOOKS</h1> ';
 			
 		}
 	
